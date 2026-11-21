@@ -160,8 +160,8 @@ ITEMS = {
     209: dict(name='Jansky Repeater', slot=256, tier=1, itemclass=3, usableby=[1], family='soidal',
          base=[], mods={13: 125, 14: 100, 32: 0, 34: 0, 36: 1, 43: 100}, seen={13: [125], 14: [100], 34: [0], 36: [1], 43: [100]}, source='soidal-family+observed'),
          # Range, Precise, Penetrating, Explosive, Subobjects/Shots, Armor Pierce
-    108: dict(name='Sinusoidal Repeater', slot=256, tier=0, itemclass=3, usableby=[1], family='soidal',
-         base=[], mods={13: 125, 14: 100, 32: 0, 34: 0, 36: 1, 43: 100}, seen={13: [125], 14: [100], 36: [1], 43: [100]}, source='guide+server', aliases=['Soidal Repeater']),
+    108: dict(name='Soidal Repeater', slot=256, tier=0, itemclass=3, usableby=[1], family='soidal',
+         base=[], mods={13: 125, 14: 100, 32: 0, 34: 0, 36: 1, 43: 100}, seen={13: [125], 14: [100], 36: [1], 43: [100]}, source='guide+server'),
          # Range, Precise, Penetrating, Explosive, Subobjects/Shots, Armor Pierce
     
     109: dict(name='Bolt Thrower', slot=256, tier=4, itemclass=3, usableby=[1], family='bolt-thrower',
@@ -961,7 +961,7 @@ def item_by_name(name):
     """Look up an item record by name or alias (case-insensitive)."""
     name = name.lower()
     for type_, rec in list(ITEMS.items()) + list(UNUSED_ITEMS.items()):
-        if rec['name'].lower() == name or name in (a.lower() for a in rec.get('aliases', ())):
+        if rec['name'].lower() == name:
             return type_, rec
     return None, None
 

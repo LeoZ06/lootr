@@ -958,7 +958,7 @@ UNUSED_ITEMS = {
 
 
 def item_by_name(name):
-    """Look up an item record by name or alias (case-insensitive)."""
+    """Look up an item record by name (case-insensitive)."""
     name = name.lower()
     for type_, rec in list(ITEMS.items()) + list(UNUSED_ITEMS.items()):
         if rec['name'].lower() == name:

@@ -133,26 +133,26 @@ ITEMS = {
          # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce; can roll twice: Bounce, Subobjects/Shots
     147: dict(name='Compound Repeater', slot=256, tier=2, itemclass=3, usableby=[1], family='repeater',
          base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={13: [100], 33: [1], 36: [1], 43: [100]}, doubles=[33, 36], source='guide+observed'),
-         # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce
+         # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce; can roll twice: Bounce, Subobjects/Shots
     148: dict(name='Redshift Repeater', slot=256, tier=3, itemclass=3, usableby=[1], family='repeater',
          base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={13: [100], 36: [1]}, doubles=[33, 36], source='guide+server'),
-         # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce; can roll twice: Subobjects/Shots
+         # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce; can roll twice: Bounce, Subobjects/Shots
     149: dict(name='Tektite Repeater', slot=256, tier=4, itemclass=3, usableby=[1], family='repeater',
          base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={32: [0], 36: [1]}, doubles=[33, 36], source='guide+observed+server'),
-         # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce; can roll twice: Subobjects/Shots
+         # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce; can roll twice: Bounce, Subobjects/Shots
     207: dict(name='Aerolith Repeater', slot=256, tier=5, itemclass=3, usableby=[1], family='repeater',
          base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={33: [1], 36: [1], 43: [100]}, doubles=[33, 36], source='guide+observed'),
-         # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce
+         # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce; can roll twice: Bounce, Subobjects/Shots
 
     4: dict(name='Shotgun', slot=256, tier=0, itemclass=3, usableby=[1], family=None,
          base=[], mods={}, seen={}, source='none'),
          # no mods
     5: dict(name='Arblast', slot=256, tier=1, itemclass=3, usableby=[1], family='shotgun',
          base=[], mods={13: 70, 32: 0, 33: 1, 34: 0, 36: 2, 43: 100, 55: 20}, seen={34: [0], 36: [2]}, source='shotgun-family+server'),
-         # Range, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce, Quick Shot / Anim Speed (pool of Bombard, same family)
+         # Range, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce, Quick Shot / Anim Speed
     150: dict(name='Dragoon', slot=256, tier=3, itemclass=3, usableby=[1], family='shotgun',
          base=[], mods={13: 70, 32: 0, 33: 1, 34: 0, 36: 3, 43: 100, 55: 20}, seen={33: [1], 36: [3]}, source='shotgun-family+server'),
-         # Range, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce, Quick Shot / Anim Speed (pool of Arblast, Bombard, same family)
+         # Range, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce, Quick Shot / Anim Speed
     208: dict(name='Bombard', slot=256, tier=5, itemclass=3, usableby=[1], family='shotgun',
          base=[], mods={13: 70, 32: 0, 33: 1, 34: 0, 36: 4, 43: 100, 55: 20}, seen={33: [1], 36: [4], 43: [100], 55: [25]}, source='guide+observed'),
          # Range, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce, Quick Shot / Anim Speed
@@ -189,7 +189,7 @@ ITEMS = {
 
     217: dict(name='Skyfire Skein', slot=256, tier=1, itemclass=2, usableby=[2], family='balefire-skein',
          base=[], mods={24: 500, 25: 200, 51: 1, 53: 200}, seen={24: [500], 25: [200], 51: [1], 53: [200]}, source='balefire-skein-family+server'),
-         # Item Crit Chance, Item Crit Damage, Extra Hit, Move Time (ms) (pool of Balefire Skein, same family)
+         # Item Crit Chance, Item Crit Damage, Extra Hit, Move Time (ms)
     116: dict(name='Balefire Skein', slot=256, tier=3, itemclass=2, usableby=[2], family='balefire-skein',
          base=[], mods={24: 500, 25: 200, 51: 1, 53: 200}, seen={}, source='guide'),
          # Item Crit Chance, Item Crit Damage, Extra Hit, Move Time (ms)
@@ -226,14 +226,14 @@ ITEMS = {
 
     197: dict(name='Lancet', slot=256, tier=1, itemclass=6, usableby=[3], family='lancet',
          base=[], mods={22: 50, 37: 20, 43: 100, 45: 1}, seen={37: [20], 45: [1]}, doubles=[45], source='lancet-family+server'),
-         # Knockback Resist, Speed %, Armor Pierce, Simultaneous (pool of Baculus, same family); can roll twice: Simultaneous
+         # Knockback Resist, Speed %, Armor Pierce, Simultaneous; can roll twice: Simultaneous
     119: dict(name='Baculus', slot=256, tier=3, itemclass=6, usableby=[3], family='lancet',
          base=[], mods={22: 50, 37: 20, 43: 100, 45: 1}, seen={}, source='guide'),
-         # Knockback Resist, Speed %, Armor Pierce, Simultaneous
+         # Knockback Resist, Speed %, Armor Pierce, Simultaneous; can roll twice: Simultaneous
 
     47: dict(name='Adjudicator', slot=256, tier=2, itemclass=6, usableby=[3], family='adjudicator',
          base=[], mods={22: 50, 32: 0, 36: 2, 37: 20, 43: 100, 51: 1}, seen={22: [50], 36: [2], 37: [20], 51: [1]}, source='adjudicator-family+server'),
-         # Knockback Resist, Penetrating, Subobjects/Shots, Speed %, Armor Pierce, Extra Hit (pool of Quaestor, same family)
+         # Knockback Resist, Penetrating, Subobjects/Shots, Speed %, Armor Pierce, Extra Hit
     224: dict(name='Quaestor', slot=256, tier=5, itemclass=6, usableby=[3], family='adjudicator',
          base=[], mods={22: 50, 32: 0, 36: 2, 37: 20, 43: 100, 51: 1}, seen={22: [50], 36: [2], 37: [20], 43: [100]}, source='guide+observed'),
          # Knockback Resist, Penetrating, Subobjects/Shots, Speed %, Armor Pierce, Extra Hit
@@ -321,7 +321,7 @@ ITEMS = {
 
     194: dict(name='Tripwire', slot=512, tier=2, itemclass=5, usableby=[1], family='tripwire',
          base=[], mods={4: 2, 35: 0, 43: 100, 47: 0, 48: 0}, seen={4: [2], 35: [0], 48: [0]}, source='tripwire-family+server'),
-         # Max Ammo, Incendiary, Armor Pierce, Barbed, Trisected (pool of Proxies, same family)
+         # Max Ammo, Incendiary, Armor Pierce, Barbed, Trisected
     110: dict(name='Proxies', slot=512, tier=4, itemclass=5, usableby=[1], family='tripwire',
          base=[], mods={4: 2, 35: 0, 43: 100, 47: 0, 48: 0}, seen={4: [2], 43: [100], 47: [0], 48: [0]}, source='guide+observed'),
          # Max Ammo, Incendiary, Armor Pierce, Barbed, Trisected
@@ -354,7 +354,7 @@ ITEMS = {
 
     111: dict(name='Kulbeda', slot=512, tier=2, itemclass=4, usableby=[2], family='kulbeda',
          base=[], mods={4: 2, 24: 500, 33: 1, 37: 80, 38: 1000, 45: 1}, seen={33: [1], 37: [80], 45: [1]}, source='kulbeda-family+server'),
-         # Max Ammo, Item Crit Chance, Bounce, Speed %, Lifetime (ms), Simultaneous (pool of Kunai, same family)
+         # Max Ammo, Item Crit Chance, Bounce, Speed %, Lifetime (ms), Simultaneous
     219: dict(name='Kunai', slot=512, tier=5, itemclass=4, usableby=[2], family='kulbeda',
          base=[], mods={4: 2, 24: 500, 33: 1, 37: 80, 38: 1000, 45: 1}, seen={24: [500], 33: [1], 45: [1]}, doubles=[45], source='guide+observed+server'),
          # Max Ammo, Item Crit Chance, Bounce, Speed %, Lifetime (ms), Simultaneous; can roll twice: Simultaneous
@@ -423,7 +423,7 @@ ITEMS = {
 
     200: dict(name='Mangonel', slot=512, tier=2, itemclass=14, usableby=[5], family='mangonel',
          base=[], mods={32: 0, 54: 50, 55: 40, 57: -200}, seen={32: [0], 54: [50], 55: [30], 57: [-250]}, source='mangonel-family+server'),
-         # Penetrating, Item Armor, Quick Shot / Anim Speed, Cooldown (pool of Scorpion, same family)
+         # Penetrating, Item Armor, Quick Shot / Anim Speed, Cooldown
     233: dict(name='Scorpion', slot=512, tier=5, itemclass=14, usableby=[5], family='mangonel',
          base=[], mods={32: 0, 54: 50, 55: 40, 57: -200}, seen={54: [50]}, source='guide+observed'),
          # Penetrating, Item Armor, Quick Shot / Anim Speed, Cooldown
@@ -632,7 +632,7 @@ ITEMS = {
 
     105: dict(name='Gliders', slot=1280, tier=2, itemclass=21, usableby=[3, 5], family='gliders',
          base=[], mods={10: 2, 11: 5, 12: 5}, seen={10: [2], 12: [5]}, source='gliders-family+server'),
-         # Armor, Movement Speed, Jump Height (pool of Volatile Gliders, same family)
+         # Armor, Movement Speed, Jump Height
     106: dict(name='Volatile Gliders', slot=1280, tier=4, itemclass=21, usableby=[3, 5], family='gliders',
          base=[], mods={10: 3, 11: 5, 12: 5}, seen={}, source='guide'),
          # Armor, Movement Speed, Jump Height
@@ -714,7 +714,7 @@ ITEMS = {
 
     191: dict(name='Blockers', slot=1024, tier=2, itemclass=20, usableby=[5], family='blockers',
          base=[], mods={36: 1}, seen={36: [1]}, source='blockers-family+server'),
-         # Subobjects/Shots (pool of Enraged Blockers, Enlarged Blockers, same family)
+         # Subobjects/Shots
     192: dict(name='Enraged Blockers', slot=1024, tier=4, itemclass=20, usableby=[5], family='blockers',
          base=[], mods={36: 1}, seen={36: [1]}, source='server'),
          # Subobjects/Shots
@@ -724,7 +724,7 @@ ITEMS = {
 
     188: dict(name='Bandolier', slot=1024, tier=2, itemclass=None, usableby=[1, 2, 3], family='bandolier',
          base=[], mods={4: 1}, seen={4: [1]}, source='bandolier-family+server'),
-         # Max Ammo (pool of Double Bandolier, same family)
+         # Max Ammo
     189: dict(name='Double Bandolier', slot=1024, tier=4, itemclass=None, usableby=[1, 2, 3], family='bandolier',
          base=[(27, 2)], mods={4: 1}, seen={}, source='guide'),
          # Max Ammo
@@ -741,58 +741,40 @@ ITEMS = {
 
     76: dict(name='Inferior Salites', slot=1536, tier=3, itemclass=None, usableby=[], family=None,
          base=[(2, 20)], mods={}, seen={}, source='observed'),
-         # no mods (implants have only their base stat)
     77: dict(name='Salites', slot=1536, tier=5, itemclass=None, usableby=[], family=None,
          base=[(2, 40)], mods={}, seen={}, source='none'),
-         # no mods
     82: dict(name='Inferior Calites', slot=1536, tier=3, itemclass=None, usableby=[], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
     83: dict(name='Calites', slot=1536, tier=5, itemclass=None, usableby=[], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
     73: dict(name='Inferior Bellites', slot=1536, tier=3, itemclass=None, usableby=[], family=None,
          base=[(18, 20)], mods={}, seen={}, source='none'),
-         # no mods
     74: dict(name='Bellites', slot=1536, tier=5, itemclass=None, usableby=[], family=None,
          base=[(18, 40)], mods={}, seen={}, source='observed'),
-         # no mods (implants have only their base stat)
     85: dict(name='Inferior Armites', slot=1536, tier=3, itemclass=None, usableby=[], family=None,
          base=[(10, 10)], mods={}, seen={}, source='observed'),
-         # no mods (implants have only their base stat)
     86: dict(name='Armites', slot=1536, tier=5, itemclass=None, usableby=[], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
     299: dict(name='Inferior Velites', slot=1536, tier=3, itemclass=None, usableby=[], family=None,
          base=[(11, 10)], mods={}, seen={}, source='none'),
-         # no mods
     300: dict(name='Velites', slot=1536, tier=5, itemclass=None, usableby=[], family=None,
          base=[(11, 20)], mods={}, seen={}, source='server'),
-         # no mods (base Movement Speed 20; DESCRIBE_ITEM logged by new_items.py)
     89: dict(name='Inferior Emites', slot=1536, tier=3, itemclass=None, usableby=[], family=None,
          base=[(12, 10)], mods={}, seen={}, source='observed'),
-         # no mods (implants have only their base stat)
     79: dict(name='Inferior Delites', slot=1536, tier=3, itemclass=None, usableby=[], family=None,
          base=[(23, 600)], mods={}, seen={}, source='server'),
-         # no mods (base Crit Chance 600; DESCRIBE_ITEM logged by new_items.py)
     80: dict(name='Delites', slot=1536, tier=5, itemclass=None, usableby=[], family=None,
          base=[(23, 1200)], mods={}, seen={}, source='none'),
-         # no mods
     308: dict(name='Inferior Ultrites', slot=1536, tier=3, itemclass=None, usableby=[], family=None,
          base=[(18, 10), (2, 10), (23, 300), (20, 50), (4, 1), (10, 5), (12, 5), (11, 5)], mods={}, seen={}, source='none'),
-         # no mods
     309: dict(name='Ultrites', slot=1536, tier=5, itemclass=None, usableby=[], family=None,
          base=[(18, 20), (2, 20), (23, 600), (20, 100), (4, 2), (10, 10), (12, 10), (11, 10)], mods={}, seen={}, source='none'),
-         # no mods
     302: dict(name='Inferior Firites', slot=1536, tier=3, itemclass=None, usableby=[], family=None,
          base=[(22, 25)], mods={}, seen={}, source='none'),
-         # no mods
     303: dict(name='Firites', slot=1536, tier=5, itemclass=None, usableby=[], family=None,
          base=[(22, 50)], mods={}, seen={}, source='none'),
-         # no mods
     88: dict(name='Exites', slot=1536, tier=5, itemclass=None, usableby=[], family=None,
          base=[(8, 1)], mods={}, seen={}, source='none'),
-         # no mods
 }
 
 # Pickup items (slot None: health / boost pickups, keys and the like): kept out of
@@ -804,55 +786,39 @@ UNUSED_ITEMS = {
 
     18: dict(name='Health Boost 1', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(1, 25)], mods={1: 25}, seen={1: [25]}, source='observed'),
-         # HP
     21: dict(name='Ammo Boost', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(3, 1)], mods={3: 1}, seen={3: [1]}, source='observed'),
-         # Ammo
 
     49: dict(name='1 EC', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(16, 1)], mods={16: 1}, seen={16: [1]}, source='observed'),
-         # EC
     96: dict(name='5 EC', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(16, 5)], mods={16: 5}, seen={16: [5]}, source='observed'),
-         # EC
     50: dict(name='10 EC', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(16, 10)], mods={16: 10}, seen={16: [10]}, source='observed'),
-         # EC
     97: dict(name='25 EC', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(16, 25)], mods={16: 25}, seen={16: [25]}, source='observed'),
-         # EC
 
     291: dict(name='1 UC', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(26, 1)], mods={}, seen={}, source='none'),
-         # no mods
     292: dict(name='5 UC', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(26, 5)], mods={}, seen={}, source='none'),
-         # no mods
 
     99: dict(name='Fungus Cave Key', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(44, 1)], mods={}, seen={}, source='server'),
-         # no mods
     201: dict(name='Vanquished Key', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(44, 1)], mods={}, seen={}, source='server'),
-         # no mods
     100: dict(name='Underground Base Key', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
     107: dict(name='Strands Key', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
     101: dict(name='Graveyard Key', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
     145: dict(name='Temple of the Lost Key', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(44, 1)], mods={}, seen={}, source='none'),
-         # no mods
     205: dict(name='Unknown Key', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(44, 1)], mods={}, seen={}, source='none'),
-         # no mods
     206: dict(name='Mysterious Key', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(44, 1)], mods={}, seen={}, source='none'),
-         # no mods
 
     #
     #   BOOST
@@ -860,135 +826,94 @@ UNUSED_ITEMS = {
 
     19: dict(name='Max Health Boost 1', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(2, 2)], mods={2: 2}, seen={2: [2]}, source='observed'),
-         # Max HP
     20: dict(name='Max Health Boost 2', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(2, 2)], mods={2: 2}, seen={2: [2]}, source='observed'),
-         # Max HP
     92: dict(name='Max Health Boost 3', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(2, 2)], mods={2: 2}, seen={2: [2]}, source='observed'),
-         # Max HP
     93: dict(name='Max Health Boost 4', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(2, 2)], mods={}, seen={}, source='none'),
-         # no mods
     236: dict(name='Max Health Boost 5', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(2, 2)], mods={}, seen={}, source='none'),
-         # no mods
 
     22: dict(name='Max Ammo Boost 1', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(4, 1)], mods={}, seen={}, source='none'),
-         # no mods
     23: dict(name='Max Ammo Boost 2', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(4, 1)], mods={4: 1}, seen={4: [1]}, source='observed'),
-         # Max Ammo
     94: dict(name='Max Ammo Boost 3', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(4, 1)], mods={4: 1}, seen={4: [1]}, source='observed'),
-         # Max Ammo
     95: dict(name='Max Ammo Boost 4', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(4, 1)], mods={4: 1}, seen={4: [1]}, source='observed'),
-         # Max Ammo
     237: dict(name='Max Ammo Boost 5', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(4, 1)], mods={}, seen={}, source='none'),
-         # no mods
 
     132: dict(name='Damage Boost 1', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(18, 2)], mods={18: 2}, seen={18: [2]}, source='observed'),
-         # Damage %
     133: dict(name='Damage Boost 2', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(18, 2)], mods={18: 2}, seen={18: [2]}, source='observed'),
-         # Damage %
     134: dict(name='Damage Boost 3', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(18, 2)], mods={18: 2}, seen={18: [2]}, source='observed'),
-         # Damage %
     135: dict(name='Damage Boost 4', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(18, 2)], mods={18: 2}, seen={18: [2]}, source='observed'),
-         # Damage %
     241: dict(name='Damage Boost 5', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(18, 2)], mods={}, seen={}, source='none'),
-         # no mods
 
     120: dict(name='Armor Boost 1', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(10, 1)], mods={10: 1}, seen={10: [1]}, source='observed'),
-         # Armor
     121: dict(name='Armor Boost 2', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(10, 1)], mods={10: 1}, seen={10: [1]}, source='observed'),
-         # Armor
     122: dict(name='Armor Boost 3', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(10, 1)], mods={}, seen={}, source='none'),
-         # no mods
     123: dict(name='Armor Boost 4', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(10, 1)], mods={10: 1}, seen={10: [1]}, source='observed'),
-         # Armor
     238: dict(name='Armor Boost 5', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(10, 1)], mods={}, seen={}, source='none'),
-         # no mods
 
     124: dict(name='Movement Speed Boost 1', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(11, 1)], mods={11: 1}, seen={11: [1]}, source='observed'),
-         # Movement Speed
     125: dict(name='Movement Speed Boost 2', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
     126: dict(name='Movement Speed Boost 3', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(11, 1)], mods={11: 1}, seen={11: [1]}, source='observed'),
-         # Movement Speed
     127: dict(name='Movement Speed Boost 4', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(11, 1)], mods={}, seen={}, source='none'),
-         # no mods
     239: dict(name='Movement Speed Boost 5', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(11, 1)], mods={}, seen={}, source='none'),
-         # no mods
 
     128: dict(name='Jump Height Boost 1', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(12, 1)], mods={12: 1}, seen={12: [1]}, source='observed'),
-         # Jump Height
     129: dict(name='Jump Height Boost 2', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(12, 1)], mods={12: 1}, seen={12: [1]}, source='observed'),
-         # Jump Height
     130: dict(name='Jump Height Boost 3', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(12, 1)], mods={12: 1}, seen={12: [1]}, source='observed'),
-         # Jump Height
     131: dict(name='Jump Height Boost 4', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(12, 1)], mods={12: 1}, seen={12: [1]}, source='observed'),
-         # Jump Height
     240: dict(name='Jump Height Boost 5', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(12, 1)], mods={}, seen={}, source='none'),
-         # no mods
 
     136: dict(name='Crit Chance Boost 1', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(23, 25)], mods={23: 25}, seen={23: [25]}, source='observed'),
-         # Crit Chance
     137: dict(name='Crit Chance Boost 2', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(23, 25)], mods={23: 25}, seen={23: [25]}, source='observed'),
-         # Crit Chance
     138: dict(name='Crit Chance Boost 3', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(23, 25)], mods={23: 25}, seen={23: [25]}, source='observed'),
-         # Crit Chance
     139: dict(name='Crit Chance Boost 4', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(23, 25)], mods={}, seen={}, source='none'),
-         # no mods
     242: dict(name='Crit Chance Boost 5', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(23, 25)], mods={}, seen={}, source='none'),
-         # no mods
 
     140: dict(name='Crit Damage Boost 1', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(20, 20)], mods={20: 20}, seen={20: [20]}, source='observed'),
-         # Crit Damage
     141: dict(name='Crit Damage Boost 2', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(20, 20)], mods={20: 20}, seen={20: [20]}, source='observed'),
-         # Crit Damage
     142: dict(name='Crit Damage Boost 3', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(20, 20)], mods={20: 20}, seen={20: [20]}, source='observed'),
-         # Crit Damage
     143: dict(name='Crit Damage Boost 4', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(20, 20)], mods={}, seen={}, source='none'),
-         # no mods
     243: dict(name='Crit Damage Boost 5', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(20, 20)], mods={}, seen={}, source='none'),
-         # no mods
 
     51: dict(name='Implant Slot 1', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(17, 1)], mods={17: 1}, seen={17: [1]}, source='observed'),
-         # Implant Slot
 
     #
     #   COSMETIC (unorganized)
@@ -996,56 +921,39 @@ UNUSED_ITEMS = {
 
     278: dict(name='Repurposed Helmet', slot=None, tier=None, itemclass=None, usableby=[1], family=None,
          base=[(60, None)], mods={}, seen={}, source='none'),
-         # no mods
     279: dict(name='Silver Headguard', slot=None, tier=None, itemclass=None, usableby=[1, 2, 5], family=None,
          base=[(60, None)], mods={}, seen={}, source='none'),
-         # no mods
     280: dict(name='Red Beret', slot=None, tier=None, itemclass=None, usableby=[1, 2, 5], family=None,
          base=[(60, None)], mods={}, seen={}, source='none'),
-         # no mods
     281: dict(name='Bunny Mask', slot=None, tier=None, itemclass=None, usableby=[1, 2, 5], family=None,
          base=[(60, None)], mods={}, seen={}, source='none'),
-         # no mods
     282: dict(name='Worn Stockman', slot=None, tier=None, itemclass=None, usableby=[1, 2, 5], family=None,
          base=[(60, 0)], mods={}, seen={}, source='none'),
-         # no mods
     283: dict(name='The Goggles', slot=None, tier=None, itemclass=None, usableby=[1, 2, 5], family=None,
          base=[(60, None)], mods={}, seen={}, source='none'),
-         # no mods
     286: dict(name='Cloth Plate', slot=None, tier=None, itemclass=None, usableby=[3], family=None,
          base=[(60, None)], mods={}, seen={}, source='none'),
-         # no mods
     287: dict(name='Fox Plate', slot=None, tier=None, itemclass=None, usableby=[3], family=None,
          base=[(60, None)], mods={}, seen={}, source='none'),
-         # no mods
     288: dict(name='Scarred Plate', slot=None, tier=None, itemclass=None, usableby=[3], family=None,
          base=[(60, 0)], mods={}, seen={}, source='none'),
-         # no mods
     290: dict(name='Blue Paisley Bandana', slot=None, tier=None, itemclass=None, usableby=[5], family=None,
          base=[(60, None)], mods={}, seen={}, source='none'),
-         # no mods
     293: dict(name='Laughing Skull', slot=None, tier=None, itemclass=None, usableby=[1, 2], family=None,
          base=[(60, 0)], mods={}, seen={}, source='server'),
-         # no mods
     294: dict(name='Grey Visor', slot=None, tier=None, itemclass=None, usableby=[1, 2, 5], family=None,
          base=[(60, 0)], mods={}, seen={}, source='none'),
-         # no mods
     295: dict(name='Fox Ears', slot=None, tier=None, itemclass=None, usableby=[1, 2, 5], family=None,
          base=[(60, 0)], mods={}, seen={}, source='none'),
-         # no mods
     297: dict(name='Newsboy', slot=None, tier=None, itemclass=None, usableby=[1, 2, 5], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
     298: dict(name='Blindfold', slot=None, tier=None, itemclass=None, usableby=[1, 2, 5], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
 
     306: dict(name='Berserker Skin', slot=None, tier=None, itemclass=None, usableby=[1], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
     307: dict(name='Killer Skin', slot=None, tier=None, itemclass=None, usableby=[2], family=None,
          base=[], mods={}, seen={}, source='server'),
-         # no mods
 }
 
 

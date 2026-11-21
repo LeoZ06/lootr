@@ -2,6 +2,8 @@
 
 *by Dr. Jekyll*
 
+Big thanks to **TheChingrish** for cross checking the mods on the items, and to **yosuki** for the original item guide.
+
 An auto looter for StarBreak (SBPE plugin). It picks up the loot you want, and only that.
 
 ## Install

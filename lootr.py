@@ -2,6 +2,9 @@
 lootr by Dr. Jekyll
 Beta
 
+Big thanks to TheChingrish for cross checking the mods on the items, and to
+yosuki for the original item guide.
+
 Description: picks up the loot you want, and only that.
 - LOOTR button in the Esc menu opens the Lootr window. Pick a Class, Slot and Item,
   then mark its mods in the table: one column per number of mods (Stock, Modified,
@@ -110,8 +113,8 @@ CHAR_NAMES = {1: 'Wildfire', 2: 'Duskwing', 3: 'Ironclad', 5: 'Fabricator'}
 
 ITEMS = {
     1: dict(name='Aesc', slot=512, tier=0, itemclass=4, usableby=[2], family='aesc',
-         base=[], mods={4: 2, 13: 100, 24: 500, 37: 80, 45: 1}, seen={}, source='guide'),
-         # Max Ammo, Range, Item Crit Chance, Speed %, Simultaneous
+         base=[], mods={}, seen={}, source='user'),
+         # no mods
     2: dict(name='Frag', slot=512, tier=0, itemclass=5, usableby=[1], family=None,
          base=[], mods={}, seen={}, source='none'),
          # no mods
@@ -119,7 +122,7 @@ ITEMS = {
          base=[], mods={}, seen={}, source='none'),
          # no mods
     5: dict(name='Arblast', slot=256, tier=1, itemclass=3, usableby=[1], family='shotgun',
-         base=[], mods={13: 70, 32: 0, 33: 1, 34: 0, 36: 2, 43: 100, 55: 20}, seen={34: [0]}, source='shotgun-family+server'),
+         base=[], mods={13: 70, 32: 0, 33: 1, 34: 0, 36: 2, 43: 100, 55: 20}, seen={34: [0], 36: [2]}, source='shotgun-family+server'),
          # Range, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce, Quick Shot / Anim Speed (pool of Bombard, same family)
     6: dict(name='Sledge', slot=256, tier=0, itemclass=6, usableby=[3], family=None,
          base=[], mods={}, seen={}, source='none'),
@@ -152,13 +155,13 @@ ITEMS = {
          base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={32: [0], 33: [1], 34: [0], 36: [1]}, doubles=[33, 36], source='guide+observed+server'),
          # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce; can roll twice: Bounce, Subobjects/Shots
     32: dict(name='Relentless Mantlet', slot=768, tier=1, itemclass=19, usableby=[3], family='mantlet',
-         base=[(10, 4)], mods={22: 50, 37: 20, 42: 40, 52: 0}, seen={37: [40], 42: [40]}, source='guide+observed'),
+         base=[(10, 4)], mods={22: 50, 37: 40, 42: 40, 52: 0}, seen={37: [40], 42: [40]}, source='guide+observed'),
          # Knockback Resist, Speed %, Acceleration, Reflect
     33: dict(name='Plating', slot=1024, tier=1, itemclass=None, usableby=[3], family='plating',
          base=[(10, 8), (11, -4)], mods={11: 5, 18: 5}, seen={18: [5]}, doubles=[18], source='guide+server'),
          # Movement Speed, Damage %; can roll twice: Damage %
     34: dict(name='Hyrst', slot=1024, tier=1, itemclass=None, usableby=[1, 2], family='hyrst',
-         base=[(10, 2), (11, 3)], mods={11: 5, 20: 50, 23: 200}, seen={11: [5], 20: [25], 23: [200]}, doubles=[23], source='guide+observed+server'),
+         base=[(10, 2), (11, 3)], mods={11: 5, 20: 25, 23: 200}, seen={11: [5], 20: [25], 23: [200]}, doubles=[23], source='guide+observed+server'),
          # Movement Speed, Crit Damage, Crit Chance; can roll twice: Crit Chance
     35: dict(name='Nacre Skein', slot=256, tier=1, itemclass=2, usableby=[2], family='skein',
          base=[], mods={24: 500, 25: 200, 50: 1, 51: 1, 53: 200}, seen={25: [200], 50: [1]}, source='guide+observed'),
@@ -203,8 +206,8 @@ ITEMS = {
          base=[], mods={}, seen={}, source='none'),
          # no mods
     54: dict(name='Antiphon', slot=512, tier=0, itemclass=14, usableby=[5], family='antiphon',
-         base=[], mods={32: 0, 38: 2000, 46: 5, 54: 50, 55: 40}, seen={}, source='guide'),
-         # Penetrating, Lifetime (ms), Secondary Subobjects, Item Armor, Quick Shot / Anim Speed
+         base=[], mods={}, seen={}, source='user'),
+         # no mods
     55: dict(name='Durable Jerkin', slot=1024, tier=2, itemclass=None, usableby=[1], family='jerkin',
          base=[(10, 10), (11, -2)], mods={11: 4, 18: 5, 23: 100}, seen={11: [4], 18: [5], 23: [100]}, source='guide+observed'),
          # Movement Speed, Damage %, Crit Chance
@@ -224,7 +227,7 @@ ITEMS = {
          base=[], mods={}, seen={}, source='none'),
          # no mods
     66: dict(name='Trinity', slot=256, tier=2, itemclass=13, usableby=[5], family='trinity',
-         base=[], mods={13: 100, 24: 500, 36: 1, 57: -50}, seen={13: [100], 36: [1], 57: [-50]}, doubles=[36, 57], source='guide+server+user'),
+         base=[], mods={13: 100, 24: 500, 36: 2, 57: -50}, seen={13: [100], 36: [1], 57: [-50]}, doubles=[36, 57], source='guide+server+user'),
          # Range, Item Crit Chance, Subobjects/Shots, Cooldown; can roll twice: Subobjects/Shots, Cooldown
     67: dict(name='Whispered Antiphon', slot=512, tier=4, itemclass=14, usableby=[5], family='whispered-antiphon',
          base=[], mods={32: 0, 36: 1, 38: 2000, 46: 5, 54: 50, 55: 40}, seen={32: [0], 36: [1], 38: [2000], 54: [50]}, source='guide+observed+server'),
@@ -287,19 +290,19 @@ ITEMS = {
          base=[(10, 16), (11, -4)], mods={11: 5, 18: 5}, seen={18: [5]}, doubles=[18], source='guide+server'),
          # Movement Speed, Damage %; can roll twice: Damage %
     103: dict(name='Durable Hyrst', slot=1024, tier=2, itemclass=None, usableby=[2, 1], family='hyrst',
-         base=[(10, 4), (11, 4)], mods={11: 5, 20: 50, 23: 200}, seen={20: [25], 23: [200]}, doubles=[23], source='guide+observed+server'),
+         base=[(10, 4), (11, 4)], mods={11: 5, 20: 25, 23: 200}, seen={20: [25], 23: [200]}, doubles=[23], source='guide+observed+server'),
          # Movement Speed, Crit Damage, Crit Chance; can roll twice: Crit Chance
     104: dict(name='Durable Woven', slot=1024, tier=2, itemclass=None, usableby=[5], family='woven',
          base=[(10, 6), (11, 4)], mods={11: 5, 20: 25, 23: 200}, seen={23: [200]}, doubles=[11], source='guide+server'),
          # Movement Speed, Crit Damage, Crit Chance; can roll twice: Movement Speed
     105: dict(name='Gliders', slot=1280, tier=2, itemclass=21, usableby=[3, 5], family='gliders',
-         base=[], mods={10: 3, 11: 5, 12: 5}, seen={10: [2], 12: [5]}, source='gliders-family+server'),
+         base=[], mods={10: 2, 11: 5, 12: 5}, seen={10: [2], 12: [5]}, source='gliders-family+server'),
          # Armor, Movement Speed, Jump Height (pool of Volatile Gliders, same family)
     106: dict(name='Volatile Gliders', slot=1280, tier=4, itemclass=21, usableby=[3, 5], family='gliders',
          base=[], mods={10: 3, 11: 5, 12: 5}, seen={}, source='guide'),
          # Armor, Movement Speed, Jump Height
     108: dict(name='Sinusoidal Repeater', slot=256, tier=0, itemclass=3, usableby=[1], family='soidal',
-         base=[], mods={13: 100, 14: 100, 32: 0, 34: 0, 36: 1, 43: 100}, seen={13: [125], 14: [100], 36: [1], 43: [100]}, source='guide+server', aliases=['Soidal Repeater']),
+         base=[], mods={13: 125, 14: 100, 32: 0, 34: 0, 36: 1, 43: 100}, seen={13: [125], 14: [100], 36: [1], 43: [100]}, source='guide+server', aliases=['Soidal Repeater']),
          # Range, Precise, Penetrating, Explosive, Subobjects/Shots, Armor Pierce
     109: dict(name='Bolt Thrower', slot=256, tier=4, itemclass=3, usableby=[1], family='bolt-thrower',
          base=[], mods={13: 80, 33: 1, 43: 100, 48: 0, 55: 20}, seen={13: [80], 33: [1], 43: [100], 48: [0], 55: [25]}, source='guide+observed'),
@@ -326,11 +329,11 @@ ITEMS = {
          base=[], mods={24: 500, 25: 200, 51: 1, 53: 200}, seen={}, source='guide'),
          # Item Crit Chance, Item Crit Damage, Extra Hit, Move Time (ms)
     117: dict(name='Baetyl', slot=256, tier=4, itemclass=3, usableby=[2], family='baetyl',
-         base=[], mods={13: 100, 24: 500, 25: 200, 45: 1}, seen={}, source='guide'),
+         base=[], mods={13: 40, 24: 500, 25: 200, 45: 1}, seen={13: [40], 45: [1]}, doubles=[45], source='guide+observed'),
          # Range, Item Crit Chance, Item Crit Damage, Simultaneous
     118: dict(name='Preceptor', slot=256, tier=4, itemclass=6, usableby=[3], family='preceptor',
-         base=[], mods={22: 50, 36: 1, 37: 20, 38: 300, 43: 100}, seen={22: [50], 36: [1], 38: [300]}, source='guide+observed'),
-         # Knockback Resist, Subobjects/Shots, Speed %, Lifetime (ms), Armor Pierce
+         base=[], mods={22: 50, 36: 1, 37: 20, 38: 300, 43: 100}, seen={22: [50], 36: [1], 38: [300]}, doubles=[36], source='guide+observed'),
+         # Knockback Resist, Subobjects/Shots (height), Speed %, Lifetime (ms), Armor Pierce; can roll twice: Shots
     119: dict(name='Baculus', slot=256, tier=3, itemclass=6, usableby=[3], family='lancet',
          base=[], mods={22: 50, 37: 20, 43: 100, 45: 1}, seen={}, source='guide'),
          # Knockback Resist, Speed %, Armor Pierce, Simultaneous
@@ -341,16 +344,16 @@ ITEMS = {
          base=[(49, -30)], mods={10: 2, 49: -10}, seen={}, source='guide'),
          # Armor, Gravity %
     147: dict(name='Compound Repeater', slot=256, tier=2, itemclass=3, usableby=[1], family='repeater',
-         base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={13: [100], 33: [1], 36: [1], 43: [100]}, source='guide+observed'),
+         base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={13: [100], 33: [1], 36: [1], 43: [100]}, doubles=[33, 36], source='guide+observed'),
          # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce
     148: dict(name='Redshift Repeater', slot=256, tier=3, itemclass=3, usableby=[1], family='repeater',
-         base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={13: [100], 36: [1]}, doubles=[36], source='guide+server'),
+         base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={13: [100], 36: [1]}, doubles=[33, 36], source='guide+server'),
          # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce; can roll twice: Subobjects/Shots
     149: dict(name='Tektite Repeater', slot=256, tier=4, itemclass=3, usableby=[1], family='repeater',
-         base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={32: [0], 36: [1]}, doubles=[36], source='guide+observed+server'),
+         base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={32: [0], 36: [1]}, doubles=[33, 36], source='guide+observed+server'),
          # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce; can roll twice: Subobjects/Shots
     150: dict(name='Dragoon', slot=256, tier=3, itemclass=3, usableby=[1], family='shotgun',
-         base=[], mods={13: 70, 32: 0, 33: 1, 34: 0, 36: 2, 43: 100, 55: 20}, seen={33: [1]}, source='shotgun-family+server'),
+         base=[], mods={13: 70, 32: 0, 33: 1, 34: 0, 36: 3, 43: 100, 55: 20}, seen={33: [1], 36: [3]}, source='shotgun-family+server'),
          # Range, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce, Quick Shot / Anim Speed (pool of Arblast, Bombard, same family)
     151: dict(name='Contrived Frag', slot=512, tier=2, itemclass=5, usableby=[1], family='frag',
          base=[], mods={4: 1, 35: 0, 43: 100, 47: 0, 48: 0}, seen={35: [0], 43: [100], 48: [0]}, source='guide+observed'),
@@ -416,13 +419,13 @@ ITEMS = {
          base=[], mods={4: 2, 39: 0, 42: 40, 43: 100, 48: 0}, seen={}, source='guide'),
          # Max Ammo, Seeking, Acceleration, Armor Pierce, Trisected
     172: dict(name='Fortified Mantlet', slot=768, tier=2, itemclass=19, usableby=[3], family='mantlet',
-         base=[(10, 8)], mods={22: 50, 37: 20, 42: 40, 52: 0}, seen={}, source='guide'),
+         base=[(10, 8)], mods={22: 50, 37: 40, 42: 40, 52: 0}, seen={}, source='guide'),
          # Knockback Resist, Speed %, Acceleration, Reflect
     173: dict(name='Banded Mantlet', slot=768, tier=3, itemclass=19, usableby=[3], family='mantlet',
-         base=[(10, 12)], mods={22: 50, 37: 20, 42: 40, 52: 0}, seen={52: [0]}, source='guide+observed'),
+         base=[(10, 12)], mods={22: 50, 37: 40, 42: 40, 52: 0}, seen={52: [0]}, source='guide+observed'),
          # Knockback Resist, Speed %, Acceleration, Reflect
     174: dict(name='Annealed Mantlet', slot=768, tier=4, itemclass=19, usableby=[3], family='mantlet',
-         base=[(10, 16)], mods={22: 50, 37: 20, 42: 40, 52: 0}, seen={}, source='guide'),
+         base=[(10, 16)], mods={22: 50, 37: 40, 42: 40, 52: 0}, seen={}, source='guide'),
          # Knockback Resist, Speed %, Acceleration, Reflect
     175: dict(name='Everdawn Dancer', slot=256, tier=2, itemclass=13, usableby=[5], family='dancer',
          base=[], mods={13: 100, 24: 500, 25: 200, 39: 0, 57: -50}, seen={25: [200], 39: [0], 57: [-50]}, doubles=[57], source='guide+observed+server'),
@@ -461,7 +464,7 @@ ITEMS = {
          base=[(10, 6), (11, 10)], mods={11: 4, 20: 50, 23: 200}, seen={11: [4], 20: [50]}, source='guide+observed'),
          # Movement Speed, Crit Damage, Crit Chance
     187: dict(name='Stompers', slot=1280, tier=3, itemclass=None, usableby=[3], family='stompers',
-         base=[(18, 20)], mods={10: 4, 18: 20}, seen={}, source='stompers-family+server'),
+         base=[(18, 20)], mods={10: 2, 18: 10}, seen={10: [2], 18: [10]}, source='stompers-family+server+user'),
          # Armor, Damage %
     188: dict(name='Bandolier', slot=1024, tier=2, itemclass=None, usableby=[1, 2, 3], family='bandolier',
          base=[], mods={4: 1}, seen={4: [1]}, source='bandolier-family+server'),
@@ -470,7 +473,7 @@ ITEMS = {
          base=[(27, 2)], mods={4: 1}, seen={}, source='guide'),
          # Max Ammo
     190: dict(name='Berserker', slot=1024, tier=3, itemclass=None, usableby=[1, 2, 3], family='berserker',
-         base=[(18, 40), (10, -20)], mods={10: 20, 18: 40}, seen={}, source='guide'),
+         base=[(18, 40), (10, -20)], mods={10: 5, 18: 20}, seen={10: [5], 18: [20]}, source='guide+user'),
          # Armor, Damage %
     191: dict(name='Blockers', slot=1024, tier=2, itemclass=20, usableby=[5], family='blockers',
          base=[], mods={36: 1}, seen={36: [1]}, source='blockers-family+server'),
@@ -497,19 +500,19 @@ ITEMS = {
          base=[], mods={4: 2, 36: 2, 39: 0, 42: 40, 43: 100, 46: 2, 48: 0}, seen={4: [2], 39: [0], 42: [40], 43: [100], 46: [2]}, doubles=[46], source='hotfoot-family+server'),
          # Max Ammo, Subobjects/Shots, Seeking, Acceleration, Armor Pierce, Secondary Subobjects, Trisected; can roll twice: Secondary Subobjects
     199: dict(name='Telson', slot=256, tier=1, itemclass=13, usableby=[5], family='telson',
-         base=[], mods={13: 100, 36: 2, 39: 0, 57: -50}, seen={}, doubles=[57], source='guide+user'),
-         # Range, Subobjects/Shots, Seeking, Cooldown; can roll twice: Cooldown
+         base=[], mods={13: 100, 36: 2, 39: 0, 57: -50}, seen={}, doubles=[36, 57], source='guide+user'),
+         # Range, Subobjects/Shots, Seeking, Cooldown; can roll twice: Subobjects/Shots, Cooldown
     200: dict(name='Mangonel', slot=512, tier=2, itemclass=14, usableby=[5], family='mangonel',
          base=[], mods={32: 0, 54: 50, 55: 40, 57: -200}, seen={32: [0], 54: [50], 55: [30], 57: [-250]}, source='mangonel-family+server'),
          # Penetrating, Item Armor, Quick Shot / Anim Speed, Cooldown (pool of Scorpion, same family)
     207: dict(name='Aerolith Repeater', slot=256, tier=5, itemclass=3, usableby=[1], family='repeater',
-         base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={33: [1], 36: [1], 43: [100]}, source='guide+observed'),
+         base=[], mods={13: 100, 14: 100, 32: 0, 33: 1, 34: 0, 36: 1, 43: 100}, seen={33: [1], 36: [1], 43: [100]}, doubles=[33, 36], source='guide+observed'),
          # Range, Precise, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce
     208: dict(name='Bombard', slot=256, tier=5, itemclass=3, usableby=[1], family='shotgun',
-         base=[], mods={13: 70, 32: 0, 33: 1, 34: 0, 36: 2, 43: 100, 55: 20}, seen={33: [1], 36: [4], 43: [100], 55: [25]}, source='guide+observed'),
+         base=[], mods={13: 70, 32: 0, 33: 1, 34: 0, 36: 4, 43: 100, 55: 20}, seen={33: [1], 36: [4], 43: [100], 55: [25]}, source='guide+observed'),
          # Range, Penetrating, Bounce, Explosive, Subobjects/Shots, Armor Pierce, Quick Shot / Anim Speed
     209: dict(name='Jansky Repeater', slot=256, tier=1, itemclass=3, usableby=[1], family='soidal',
-         base=[], mods={13: 100, 14: 100, 32: 0, 34: 0, 36: 1, 43: 100}, seen={14: [100], 34: [0], 36: [1], 43: [100]}, source='soidal-family+observed'),
+         base=[], mods={13: 125, 14: 100, 32: 0, 34: 0, 36: 1, 43: 100}, seen={13: [125], 14: [100], 34: [0], 36: [1], 43: [100]}, source='soidal-family+observed'),
          # Range, Precise, Penetrating, Explosive, Subobjects/Shots, Armor Pierce
     210: dict(name='Unstable Frag', slot=512, tier=5, itemclass=5, usableby=[1], family='frag',
          base=[], mods={4: 1, 35: 0, 43: 100, 47: 0, 48: 0}, seen={}, source='guide'),
@@ -557,14 +560,14 @@ ITEMS = {
          base=[], mods={4: 2, 36: 2, 39: 0, 42: 40, 43: 100, 48: 0}, seen={4: [2], 36: [2], 43: [100]}, source='guide+observed'),
          # Max Ammo, Subobjects/Shots, Seeking, Acceleration, Armor Pierce, Trisected
     228: dict(name='Eternal Mantlet', slot=768, tier=5, itemclass=19, usableby=[3], family='mantlet',
-         base=[(10, 20)], mods={22: 50, 37: 20, 42: 40, 52: 0}, seen={22: [50], 37: [40], 42: [40], 52: [0]}, source='guide+observed'),
+         base=[(10, 20)], mods={22: 50, 37: 40, 42: 40, 52: 0}, seen={22: [50], 37: [40], 42: [40], 52: [0]}, source='guide+observed'),
          # Knockback Resist, Speed %, Acceleration, Reflect
     229: dict(name='Direfall Dancer', slot=256, tier=5, itemclass=13, usableby=[5], family='dancer',
          base=[], mods={13: 100, 24: 500, 25: 200, 39: 0, 57: -50}, seen={13: [100], 24: [500], 25: [200], 39: [0], 57: [-50]}, doubles=[57], source='guide+observed+server'),
          # Range, Item Crit Chance, Item Crit Damage, Seeking, Cooldown; can roll twice: Cooldown
     230: dict(name='Volta', slot=256, tier=5, itemclass=13, usableby=[5], family='trinity',
-         base=[], mods={13: 100, 24: 500, 36: 1, 57: -50}, seen={24: [500], 36: [1], 57: [-50]}, doubles=[57], source='guide+observed+user'),
-         # Range, Item Crit Chance, Subobjects/Shots, Cooldown; can roll twice: Cooldown
+         base=[], mods={13: 100, 24: 500, 36: 2, 57: -50}, seen={24: [500], 36: [1], 57: [-50]}, doubles=[36, 57], source='guide+observed+user'),
+         # Range, Item Crit Chance, Subobjects/Shots, Cooldown; can roll twice: Subobjects/Shots, Cooldown
     232: dict(name='Blasphemous Antiphon', slot=512, tier=5, itemclass=14, usableby=[5], family='antiphon',
          base=[], mods={32: 0, 36: 1, 38: 2000, 46: 5, 54: 50, 55: 40}, seen={32: [0], 36: [1], 38: [2000], 54: [50], 55: [40]}, doubles=[36], source='guide+observed+server'),
          # Penetrating, Subobjects/Shots, Lifetime (ms), Secondary Subobjects, Item Armor, Quick Shot / Anim Speed; can roll twice: Subobjects/Shots
@@ -596,13 +599,13 @@ ITEMS = {
          base=[(10, 25), (11, -2)], mods={11: 4, 18: 5, 23: 100}, seen={11: [4], 18: [5], 23: [100]}, source='guide+observed'),
          # Movement Speed, Damage %, Crit Chance
     250: dict(name='Augmented Hyrst', slot=1024, tier=3, itemclass=None, usableby=[2], family='hyrst',
-         base=[(10, 6), (11, 5)], mods={11: 5, 20: 50, 23: 200}, seen={23: [200]}, doubles=[23], source='guide+server'),
+         base=[(10, 6), (11, 5)], mods={11: 5, 20: 25, 23: 200}, seen={23: [200]}, doubles=[23], source='guide+server'),
          # Movement Speed, Crit Damage, Crit Chance; can roll twice: Crit Chance
     251: dict(name='Reinforced Hyrst', slot=1024, tier=4, itemclass=None, usableby=[2], family='hyrst',
-         base=[(10, 8), (11, 6)], mods={11: 5, 20: 50, 23: 200}, seen={23: [200]}, doubles=[23], source='guide+server'),
+         base=[(10, 8), (11, 6)], mods={11: 5, 20: 25, 23: 200}, seen={23: [200]}, doubles=[23], source='guide+server'),
          # Movement Speed, Crit Damage, Crit Chance; can roll twice: Crit Chance
     252: dict(name='Resilient Hyrst', slot=1024, tier=5, itemclass=None, usableby=[2], family='hyrst',
-         base=[(10, 10), (11, 7)], mods={11: 5, 20: 50, 23: 200}, seen={11: [5], 20: [25], 23: [200]}, doubles=[23], source='guide+observed'),
+         base=[(10, 10), (11, 7)], mods={11: 5, 20: 25, 23: 200}, seen={11: [5], 20: [25], 23: [200]}, doubles=[23], source='guide+observed'),
          # Movement Speed, Crit Damage, Crit Chance; can roll twice: Crit Chance
     253: dict(name='Augmented Woven', slot=1024, tier=3, itemclass=None, usableby=[5], family='woven',
          base=[(10, 9), (11, 5)], mods={11: 5, 20: 25, 23: 200}, seen={11: [5], 20: [25], 23: [200]}, doubles=[11], source='guide+observed+server'),
@@ -905,6 +908,9 @@ UNUSED_ITEMS = {
          # no mods
     292: dict(name='5 UC', slot=None, tier=None, itemclass=None, usableby=[], family=None,
          base=[(26, 5)], mods={}, seen={}, source='none'),
+         # no mods
+    293: dict(name='Laughing Skull', slot=None, tier=None, itemclass=None, usableby=[1, 2], family=None,
+         base=[(60, 0)], mods={}, seen={}, source='server'),
          # no mods
     294: dict(name='Grey Visor', slot=None, tier=None, itemclass=None, usableby=[1, 2, 5], family=None,
          base=[(60, 0)], mods={}, seen={}, source='none'),
